@@ -1,6 +1,11 @@
 import { Component } from 'react';
 
 export default class EventBind extends Component {
+  handleClick() {
+    // alert("Hello");
+    console.log(this);
+  }
+
   render() {
     return (
       <div>
@@ -12,6 +17,7 @@ export default class EventBind extends Component {
          */}
         <p></p>
         <h2>EventBinding</h2>
+        <button onClick={this.handleClick.bind(this)}>Click1</button>
       </div>
     );
   }
