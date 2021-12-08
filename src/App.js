@@ -3,6 +3,7 @@ import AddEvents from './components/addEvents/AddEvents';
 import AddEventsClass from './components/addEventClass/AddEventsClass';
 import EventBind from './components/eventBinding/EventBind';
 import MouseEvents from './components/mouseEvents/MouseEvents';
+import Form from './components/form/Form';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       {/* <AddEvents /> */}
       {/* <AddEventsClass /> */}
       {/* <EventBind /> */}
-      <MouseEvents/>
+      {/* <MouseEvents/> */}
+      <Form />
     
     </div>
   );

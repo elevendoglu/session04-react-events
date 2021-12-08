@@ -19,8 +19,11 @@ const MouseEvents = () => {
   };
   // mouseMove event
   const handleMouseMove = (e) => {
-    setCoordX(e.nativeEvent.offsetX);
-    setCoordY(e.nativeEvent.offsetY); 
+    setCoordX(e.pageX);
+    setCoordY(e.pageY);  /* added for displaying the coordinates in any point of page but doesn't work */
+   
+    // setCoordX(e.nativeEvent.offsetX);  // only active on todo 3
+    // setCoordY(e.nativeEvent.offsetY); 
   };
 
   return (

@@ -1,5 +1,7 @@
 import './styles.css';
 
+const handleName = (e) => console.log(e.target.value);
+
 const Form = () => {
   return (
     <div style={{ height: '110vh' }}>
@@ -7,15 +9,15 @@ const Form = () => {
         <div>
           <p></p>
           <label>
-            <strong>Username:</strong>{' '}
+            <strong>Username:</strong>
           </label>
           <br />
-          <input type="text" placeholder="name" />
+          <input type="text" placeholder="name" defaultValue="Felix" onChange={handleName} />
         </div>
         <div>
           <p></p>
           <label>
-            <strong>E-mail:</strong>{' '}
+            <strong>E-mail:</strong>
           </label>
           <br />
           <input type="email" placeholder="email" />
