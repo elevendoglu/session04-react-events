@@ -1,15 +1,19 @@
 import './styles.css';
-
-const handleName = (e) => console.log(e.target.value);
+import { useState } from 'react';
 
 const Form = () => {
+const [name, setName] = useState('');
+const handleName = (e) => setName(e.target.value); /* name target screning near "username: " */
+// const handleName = (e) => console.log(e.target.value);     //target displaying on console screen
+
+
   return (
     <div style={{ height: '110vh' }}>
       <form>
         <div>
           <p></p>
           <label>
-            <strong>Username:</strong>
+            <strong>Username: {name}</strong>
           </label>
           <br />
           <input type="text" placeholder="name" defaultValue="Felix" onChange={handleName} />
