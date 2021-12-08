@@ -5,9 +5,11 @@ export default class EventBind extends Component {
       super(props);
       this.state= {message: "Hellooo Constructor"};
     }
+  // handleClick() {                          //1.render method
+  handleClick(name) {
+    // this.setState({ message: "Updated message Goodbye"});                  //1.render method
+    this.setState({ message: "Updated message Goodbye " + name });
 
-  handleClick() {
-    this.setState({ message: "Updated message Goodbye"});
     // alert("Hello");
     console.log(this);
   }
@@ -23,7 +25,8 @@ export default class EventBind extends Component {
          */}
         <p>{this.state.message}</p>
         <h2>EventBinding</h2>
-        <button onClick={this.handleClick.bind(this)}>Click1</button>
+        {/* <button onClick={this.handleClick.bind(this)}>Click1</button>              //1.render method */}
+        <button onClick={() => this.handleClick('elevo')}>Click1</button>
       </div>
     );
   }
