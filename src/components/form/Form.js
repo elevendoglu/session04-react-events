@@ -13,6 +13,7 @@ const handlePassword = (e) => setPass(e.target.value);
 const handleCountry = (e) => setCountry(e.target.value);
 
 const handleSubmit = (e) => {
+  e.preventDefault();
   alert(
     `
     userName: ${name}
