@@ -12,12 +12,24 @@ const handleName = (e) => setName(e.target.value); /* name target screning near 
 const handlePassword = (e) => setPass(e.target.value);
 const handleCountry = (e) => setCountry(e.target.value);
 
+const handleSubmit = (e) => {
+  alert(
+    `
+    userName: ${name}
+    email: ${email}
+    pass: ${pass}
+    country: ${country}
+    `
+
+  );
+};
+
 // const handleName = (e) => console.log(e.target.value);     //target displaying on console screen
 
 
   return (
     <div style={{ height: '110vh' }}>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div>
           <p></p>
           <label>
