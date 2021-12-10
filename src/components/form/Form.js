@@ -3,7 +3,15 @@ import { useState } from 'react';
 
 const Form = () => {
 const [name, setName] = useState('');
+const [email, setEmail] = useState('');
+const [pass, setPass] = useState('');
+const [country, setCountry] = useState('');
+
+const handleEmail = (e) => setEmail(e.target.value); 
 const handleName = (e) => setName(e.target.value); /* name target screning near "username: " */
+const handlePassword = (e) => setPass(e.target.value);
+const handleCountry = (e) => setCountry(e.target.value);
+
 // const handleName = (e) => console.log(e.target.value);     //target displaying on console screen
 
 
@@ -16,30 +24,30 @@ const handleName = (e) => setName(e.target.value); /* name target screning near 
             <strong>Username: {name}</strong>
           </label>
           <br />
-          <input type="text" placeholder="name" defaultValue="Felix" onChange={handleName} />
+          <input type="text" placeholder="name" defaultValue="Please enter your name" onChange={handleName} />
         </div>
         <div>
           <p></p>
           <label>
-            <strong>E-mail:</strong>
+            <strong>E-mail: {email}</strong>
           </label>
           <br />
-          <input type="email" placeholder="email" />
+          <input type="email" placeholder="email" onChange={handleEmail}/>
         </div>
         <div>
           <p></p>
           <label>
-            <strong>Password: </strong>
+            <strong>Password: {pass} </strong>
           </label>
           <br />
-          <input type="password" placeholder="pass" />
+          <input type="password" placeholder="pass" onChange={handlePassword} />
         </div>
         <div style={{ margin: '10px auto' }}>
           <p></p>
           <label>
-            <strong>Country: </strong>
+            <strong>Country: {country} </strong>
           </label>
-          <select
+          <select onChange={handleCountry}
             style={{ marginTop: '10px', width: '100px', padding: '10px' }}
           >
             <option value="">Country</option>
