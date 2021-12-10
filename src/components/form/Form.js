@@ -23,6 +23,10 @@ const handleSubmit = (e) => {
     `
 
   );
+  setName("");
+  setEmail("");
+  setPass("");
+  setCountry("");
 };
 
 // const handleName = (e) => console.log(e.target.value);     //target displaying on console screen
@@ -37,7 +41,13 @@ const handleSubmit = (e) => {
             <strong>Username: {name}</strong>
           </label>
           <br />
-          <input type="text" placeholder="name" defaultValue="Please enter your name" onChange={handleName} />
+          <input 
+          type="text" 
+          placeholder="name" 
+          value={name}
+          // defaultValue="Please enter your name" 
+          onChange={handleName} 
+          />
         </div>
         <div>
           <p></p>
@@ -45,7 +55,7 @@ const handleSubmit = (e) => {
             <strong>E-mail: {email}</strong>
           </label>
           <br />
-          <input type="email" placeholder="email" onChange={handleEmail}/>
+          <input type="email" placeholder="email" value={email} onChange={handleEmail}/>
         </div>
         <div>
           <p></p>
@@ -53,7 +63,7 @@ const handleSubmit = (e) => {
             <strong>Password: {pass} </strong>
           </label>
           <br />
-          <input type="password" placeholder="pass" onChange={handlePassword} />
+          <input type="password" placeholder="pass" value={pass} onChange={handlePassword} />
         </div>
         <div style={{ margin: '10px auto' }}>
           <p></p>
